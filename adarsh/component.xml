@@ -5,4 +5,6 @@
 <!--    <webapp name="party">-->
 <!--        <root-screen host=".*" location="component://party/screen/party/PartyScreen.xml"/>-->
 <!--    </webapp>-->
+    <!-- Register REST API -->
+    <depends-on name="moqui-training"/>
 </component>

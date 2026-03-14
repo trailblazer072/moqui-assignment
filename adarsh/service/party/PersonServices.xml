@@ -1,0 +1,25 @@
+<services xmlns="http://moqui.org/xsd/service-definition-3.xsd">
+
+    <service verb="create" noun="Person" type="inline">
+
+        <in-parameters>
+            <parameter name="partyId" type="String" required="true"/>
+            <parameter name="firstName" type="String" required="true"/>
+            <parameter name="lastName" type="String" required="true"/>
+            <parameter name="dateOfBirth" type="Timestamp"/>
+
+            <!-- Allow additional optional parameters -->
+            <parameter name="parameters" type="Map"/>
+        </in-parameters>
+
+        <out-parameters>
+            <parameter name="responseMessage" type="String"/>
+        </out-parameters>
+
+        <actions>
+            <script location="component://adarsh/service/party/createPerson.groovy"/>
+        </actions>
+
+    </service>
+
+</services>
